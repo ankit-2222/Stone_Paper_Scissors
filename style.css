@@ -1,0 +1,206 @@
+/* General Reset and Font Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff8a00, #e52e71);
+    color: #fff;
+    text-align: center;
+}
+
+#heading {
+    margin-top: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Choice Buttons Styling */
+.choices {
+    display: inline-block;
+    margin: 0 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choices img {
+    margin: 0;
+    border-radius: 50%;
+    width: 165px;
+    height: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choices:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.choices img:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+/* Scoreboard Styling */
+.scoreBoard {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.score {
+    text-align: center;
+}
+
+.score p {
+    font-size: 1.2em;
+}
+
+#userScore, #compScore {
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #ffdd59;
+}
+
+/* Message Container Styling */
+.msgContainer {
+    margin-top: 20px;
+}
+
+#msg {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ffdd59;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+#endGameBtn {
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ffdd59;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1em;
+    transition: transform 0.3s linear, box-shadow 0.3s ease;
+}
+
+#endGameBtn:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5)
+}
+
+.scale-effect {
+    transform: scale(1.2);
+    transition: transform 0.5s linear;
+}
+
+.endGameMsg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.endGameMsg p {
+    margin: 5px;
+    flex-basis: 100%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+#reset{
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ffdd59;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1em;
+    transition: transform 0.3s linear, box-shadow 0.3s ease;
+}
+
+#reset:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5)
+}
+
+
+.hide {
+    display: none;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #heading {
+        font-size: 2em;
+    }
+
+    .choices img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .scoreBoard {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #userScore, #compScore {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
+    #heading {
+        font-size: 1.8em;
+    }
+
+    .choices img {
+        width: 70px;
+        height: 70px;
+    }
+
+    #msg {
+        font-size: 1em;
+    }
+}
